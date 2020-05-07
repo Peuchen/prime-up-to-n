@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+
+    <script>
+        let n = prompt("Please enter a number for up to which you want to receive prime numbers")
+        let array = []
+        for (let i = 2; i <= n; i++) {
+            if (isPrime(i)) array.push(i);
+        }
+        alert(array);
+
+        function isPrime(i) {
+            for(let factor = 2; factor < i; factor++) {
+                if(i % factor === 0) return false;
+            }
+            return i > 1;
+        }
+    </script>
+
+</body>
+</html>
